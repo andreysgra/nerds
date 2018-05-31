@@ -1,0 +1,40 @@
+.slider {
+  position: relative;
+  min-height: 430px;
+}
+
+.slider__controls {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  width: 240px;
+  height: 18px;
+  bottom: 95px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider__controls-button {
+  position: relative;
+  display: block;
+  margin: 0 9px;
+  width: 18px;
+  height: 18px;
+  border: 0;
+  border-radius: 50%;
+  background-color: @white;
+  cursor: pointer;
+
+  &--active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    border: 2px solid #c1c1c1;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,53 @@
+.button {
+  display: inline-block;
+  vertical-align: top;
+  border: 0;
+  border-radius: 3px;
+  font: inherit;
+  font-weight: 500;
+  line-height: 18px;
+  color: @font-color-button;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:active {
+    color: @font-color-button--active;
+    .ps-inner-shadow(#000101; 10%; 90deg; 3px; 0; 0);
+  }
+
+  &--red {
+    background-color: @bg-color-button-red;
+
+    &:hover {
+      background-color: @bg-color-button-red--hover;
+    }
+
+    &:active {
+      background-color: @bg-color-button-red--active;
+    }
+  }
+
+  &--green {
+    background-color: @bg-color-button-green;
+
+    &:hover {
+      background-color: @bg-color-button-green--hover;
+    }
+
+    &:active {
+      background-color: @bg-color-button-green--active;
+    }
+  }
+
+  &--yellow {
+    background-color: @bg-color-button-yellow;
+
+    &:hover {
+      background-color: @bg-color-button-yellow--hover;
+    }
+
+    &:active {
+      background-color: @bg-color-button-yellow--active;
+    }
+  }
+}

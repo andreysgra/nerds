@@ -62,7 +62,13 @@ gulp.task("html", function() {
 
   return gulp
     .src(projectDirs.src.root + "*.html")
-    .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
+    .pipe(
+      htmlmin({
+        collapseInlineTagWhitespace: true,
+        collapseWhitespace: true,
+        removeComments: true
+      })
+    )
     .pipe(gulp.dest(projectDirs.build.root))
     .pipe(browserSync.stream());
 });

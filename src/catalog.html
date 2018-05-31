@@ -11,37 +11,39 @@
 
 <body class="page">
   <header class="page-header">
-    <nav class="main-nav">
-      <a class="logo main-nav__logo" href="index.html">
-        <img class="logo__image" src="img/nerds-logo.svg" alt="Логотип дизайн-студии «Нёрдс»" width="160" height="65">
-      </a>
+    <div class="content-wrapper">
+      <nav class="main-nav">
+        <a class="logo" href="index.html">
+          <img class="logo__image" src="img/nerds-logo.svg" alt="Логотип дизайн-студии «Нёрдс»" width="160" height="65">
+        </a>
 
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">Студия</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">Клиенты</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link">Магазин</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">Контакты</a>
-        </li>
-      </ul>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Студия</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Клиенты</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--current">Магазин</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Контакты</a>
+          </li>
+        </ul>
 
-      <div class="user">
-        <a class="user__cart" href="#">Корзина</a>
+        <div class="main-nav__user">
+          <a class="main-nav__user-cart main-nav__link" href="#">Корзина</a>
+        </div>
+      </nav>
+
+      <div class="page-main__title-wrapper">
+        <h1 class="page-main__title">Магазин готовых шаблонов</h1>
       </div>
-    </nav>
+    </div>
   </header>
 
   <main class="page-main">
-    <div class="page-main__title-wrapper">
-      <h1 class="page-main__title">Магазин готовых шаблонов</h1>
-    </div>
-
     <div class="catalog">
       <section class="catalog__filter">
         <h2 class="visually-hidden">Фильтр шаблонов</h2>
@@ -118,7 +120,7 @@
             </ul>
           </fieldset>
 
-          <button class="button form-filters__button" type="submit">Показать</button>
+          <button class="button button--gray form-filters__button" type="submit">Показать</button>
         </form>
       </section>
 
@@ -158,7 +160,7 @@
             <div class="card-product__description">
               <h2 class="card-product__title">Sedona</h2>
               <p class="card-product__text">Информационный сайт для туристов</p>
-              <a href="#" class="card-product__link button">9 900 руб.</a>
+              <a href="#" class="card-product__link button button--red">9 900 руб.</a>
             </div>
           </li>
           <li class="catalog-list__item card-product">
@@ -166,7 +168,7 @@
             <div class="card-product__description">
               <h2 class="card-product__title">Pink App</h2>
               <p class="card-product__text">Продуктовый лендинг приложения для iOS и Android</p>
-              <a href="#" class="card-product__link button">9 900 руб.</a>
+              <a href="#" class="card-product__link button button--red">9 900 руб.</a>
             </div>
           </li>
           <li class="catalog-list__item card-product">
@@ -175,7 +177,7 @@
               <h2 class="card-product__title">Barbershop</h2>
               <p class="card-product__text">Сайт салона красоты.
                 <br>Для мужчин, да.</p>
-              <a href="#" class="card-product__link button">9 900 руб.</a>
+              <a href="#" class="card-product__link button button--red">9 900 руб.</a>
             </div>
           </li>
           <li class="catalog-list__item card-product">
@@ -184,7 +186,7 @@
               <h2 class="card-product__title">Mishka</h2>
               <p class="card-product__text">Интернет-магазин
                 <br>вязаных игрушек</p>
-              <a href="#" class="card-product__link button">9 900 руб.</a>
+              <a href="#" class="card-product__link button button--red">9 900 руб.</a>
             </div>
           </li>
           <li class="catalog-list__item card-product">
@@ -192,7 +194,7 @@
             <div class="card-product__description">
               <h2 class="card-product__title">A Plus</h2>
               <p class="card-product__text">Лендинг курсов повышения квалификации</p>
-              <a href="#" class="card-product__link button">9 900 руб.</a>
+              <a href="#" class="card-product__link button button--red">9 900 руб.</a>
             </div>
           </li>
           <li class="catalog-list__item card-product">
@@ -200,7 +202,7 @@
             <div class="card-product__description">
               <h2 class="card-product__title">Кваст</h2>
               <p class="card-product__text">Промо-сайт производителя крафтового кваса</p>
-              <a href="#" class="card-product__link button">9 900 руб.</a>
+              <a href="#" class="card-product__link button button--red">9 900 руб.</a>
             </div>
           </li>
         </ul>
@@ -227,22 +229,22 @@
     <section class="map">
       <h2 class="visually-hidden">Как к нам добраться</h2>
 
-      <img class="map__image" src="img/bg-map.png" width="1440" height="416" alt="Месторасположение офиса">
+      <img class="map__image" src="img/bg-map.png" alt="Месторасположение офиса" width="1440" height="416">
 
       <div class="map__interactive" id="map"></div>
 
-      <div class="content-wrapper">
-        <div class="contacts map__contacts">
+      <div class="map__contacts-wrapper">
+        <div class="contacts">
           <p class="contacts__caption">Nёrds design studio</p>
 
           <p class="contacts__text">191186, Санкт-Петербург,
             <br>ул. Б. Конюшенная, д. 19/8</p>
 
-          <p class="contacts__text">тел.
+          <p class="contacts__text">тел.&nbsp;
             <a href="tel:+78122757575">+7 (812) 275-75-75</a>
           </p>
 
-          <a class="button contacts__button" href="#">Напишите нам</a>
+          <a class="button button--red contacts__button" href="#">Напишите нам</a>
         </div>
       </div>
     </section>
@@ -271,40 +273,41 @@
           </a>
         </li>
       </ul>
-    </div>
 
-    <div class="social-offering">
-      <p class="social-offering__title">Давайте дружить, это выгодно!</p>
-      <p class="social-offering__text">Скидка 10% для друзей из социальных сетей.</p>
+      <div class="social-offering">
+        <p class="social-offering__title">Давайте дружить, это выгодно!</p>
+        <p class="social-offering__text">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
     </div>
   </footer>
 
-  <div class="modal-feedback">
-    <form class="form-feedback" action="https://echo.htmlacademy.ru" method="POST">
-      <fieldset class="form-feedback__fieldset">
-        <legend class="form-feedback__legend">Напишите нам</legend>
+  <form class="form-feedback page__form-feedback" action="https://echo.htmlacademy.ru" method="POST">
+    <h2 class="form-feedback__caption">Напишите нам</h2>
 
-        <div class="form-feedback__row">
-          <div class="form-feedback__column">
-            <label class="form-feedback__label" for="name">Ваше имя:</label>
-            <input class="form-feedback__text" type="text" name="feedback-name" id="name" required>
-          </div>
+    <div class="form-feedback__row">
+      <div class="form-feedback__column">
+        <label class="form-feedback__label" for="feedback-name">Ваше имя:</label>
+        <input class="form-feedback__text" type="text" name="name" id="feedback-name" value="" placeholder="Имя Фамилия" required>
+      </div>
 
-          <div class="form-feedback__column">
-            <label class="form-feedback__label" for="email">Ваш e-mail:</label>
-            <input class="form-feedback__text" type="email" name="feedback-email" id="email" required>
-          </div>
-        </div>
+      <div class="form-feedback__column">
+        <label class="form-feedback__label" for="feedback-email">Ваш e-mail:</label>
+        <input class="form-feedback__text" type="email" name="email" id="feedback-email" value="" placeholder="email@example.com"
+          required>
+      </div>
+    </div>
 
-        <div class="form-feedback__row">
-          <label class="form-feedback__label" for="message">Текст письма:</label>
-          <textarea class="form-feedback__textarea" name="feedback-message" id="message" cols="30" rows="10"></textarea>
-        </div>
+    <div class="form-feedback__row form-feedback__row-message">
+      <label class="form-feedback__label" for="feedback-message">Текст письма:</label>
+      <textarea class="form-feedback__text form-feedback__textarea" name="message" id="feedback-message" placeholder="В свободной форме"></textarea>
+    </div>
 
-        <button class="button form-feedback__button" type="submit">Отправить</button>
-      </fieldset>
-    </form>
-  </div>
+    <button class="button button--red form-feedback__button" type="submit">Отправить</button>
+
+    <button class="form-feedback__close" aria-label="Закрыть" type="button"></button>
+  </form>
+
+  <div class="page__modal-overlay"></div>
 
   <script src="js/index.min.js"></script>
 </body>

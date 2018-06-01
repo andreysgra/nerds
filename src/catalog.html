@@ -37,92 +37,91 @@
         </div>
       </nav>
 
-      <div class="page-main__title-wrapper">
-        <h1 class="page-main__title">Магазин готовых шаблонов</h1>
+      <div class="page-header__title-wrapper">
+        <h1 class="page-header__title">Магазин готовых шаблонов</h1>
       </div>
     </div>
   </header>
 
   <main class="page-main">
-    <div class="catalog">
-      <section class="catalog__filter">
-        <h2 class="visually-hidden">Фильтр шаблонов</h2>
-
+    <div class="catalog page-main__catalog">
+      <aside class="catalog__filter">
         <form class="form-filters" action="https://echo.htmlacademy.ru" method="GET">
-          <fieldset class="form-filters__fieldset">
+          <fieldset class="form-filters__fieldset form-filters__price">
             <legend class="form-filters__legend">Стоимость:</legend>
 
-            <div class="form-filters__range">
-              <div class="form-filters__range-scale">
-                <div class="form-filters__range-bar"></div>
+            <div class="price-filter form-filters__price-filter">
+              <div class="price-filter__range">
+                <div class="price-filter__range-scale">
+                  <div class="price-filter__range-bar"></div>
+
+                  <button class="price-filter__range-handle price-filter__range-handle--min" type="button" aria-label="Минимально"></button>
+                  <button class="price-filter__range-handle price-filter__range-handle--max" type="button" aria-label="Максимально"></button>
+                </div>
               </div>
 
-              <button class="form-filters__range-handle form-filters__range-handle--min" type="button" aria-label="Минимально"></button>
-              <button class="form-filters__range-handle form-filters__range-handle--max" type="button" aria-label="Максимально"></button>
+              <p class="price-filter__interval">
+                <label class="price-filter__label">От
+                  <input class="price-filter__input" type="text" name="min-price" value="0">
+                </label>
+
+                <label class="price-filter__label price-filter__label--max-price">До
+                  <input class="price-filter__input" type="text" name="max-price" value="15000">
+                </label>
+              </p>
             </div>
 
-            <p class="form-filters__interval">
-              <label class="form-filters__label-interval">От
-                <input class="form-filters__input-text" type="text" name="min-price" value="0">
-              </label>
-            </p>
-
-            <p class="form-filters__interval">
-              <label class="form-filters__label-interval">До
-                <input class="form-filters__input-text" type="text" name="max-price" value="15000">
-              </label>
-            </p>
           </fieldset>
 
-          <fieldset class="form-filters__fieldset">
+          <fieldset class="form-filters__fieldset form-filters__grid">
             <legend class="form-filters__legend">Сетка:</legend>
 
             <ul class="form-filters__input-wrapper">
               <li class="form-filters__input-block">
                 <input class="form-filters__radio visually-hidden" type="radio" id="filter-adaptive" name="grid" value="adaptive" checked>
-                <label class="form-filters__label" for="filter-adaptive">Адаптивная</label>
+                <label class="form-filters__label form-filters__label-radio" for="filter-adaptive">Адаптивная</label>
               </li>
               <li class="form-filters__input-block">
                 <input class="form-filters__radio visually-hidden" type="radio" id="filter-fixed" name="grid" value="fixed">
-                <label class="form-filters__label" for="filter-fixed">Фиксированная</label>
+                <label class="form-filters__label form-filters__label-radio" for="filter-fixed">Фиксированная</label>
               </li>
               <li class="form-filters__input-block">
                 <input class="form-filters__radio visually-hidden" type="radio" id="filter-fluid" name="grid" value="fluid">
-                <label class="form-filters__label" for="filter-fluid">Резиновая</label>
+                <label class="form-filters__label form-filters__label-radio" for="filter-fluid">Резиновая</label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="form-filters__fieldset">
+          <fieldset class="form-filters__fieldset form-filters__features">
             <legend class="form-filters__legend">Особенности:</legend>
 
             <ul class="form-filters__input-wrapper">
               <li class="form-filters__input-block">
                 <input class="form-filters__checkbox visually-hidden" type="checkbox" id="filter-slider" name="slider" checked>
-                <label class="form-filters__label" for="filter-slider">Слайдер</label>
+                <label class="form-filters__label form-filters__label-checkbox" for="filter-slider">Слайдер</label>
               </li>
               <li class="form-filters__input-block">
                 <input class="form-filters__checkbox visually-hidden" type="checkbox" id="filter-features" name="features">
-                <label class="form-filters__label" for="filter-features">Блок преимуществ</label>
+                <label class="form-filters__label form-filters__label-checkbox" for="filter-features">Блок преимуществ</label>
               </li>
               <li class="form-filters__input-block">
                 <input class="form-filters__checkbox visually-hidden" type="checkbox" id="filter-news" name="news" checked>
-                <label class="form-filters__label" for="filter-news">Новости</label>
+                <label class="form-filters__label form-filters__label-checkbox" for="filter-news">Новости</label>
               </li>
               <li class="form-filters__input-block">
                 <input class="form-filters__checkbox visually-hidden" type="checkbox" id="filter-gallery" name="gallery">
-                <label class="form-filters__label" for="filter-gallery">Галерея</label>
+                <label class="form-filters__label form-filters__label-checkbox" for="filter-gallery">Галерея</label>
               </li>
               <li class="form-filters__input-block">
                 <input class="form-filters__checkbox visually-hidden" type="checkbox" id="filter-cart" name="cart">
-                <label class="form-filters__label" for="filter-cart">Корзина</label>
+                <label class="form-filters__label form-filters__label-checkbox" for="filter-cart">Корзина</label>
               </li>
             </ul>
           </fieldset>
 
           <button class="button button--gray form-filters__button" type="submit">Показать</button>
         </form>
-      </section>
+      </aside>
 
       <section class="catalog__content">
         <h2 class="visually-hidden">Каталог шаблонов</h2>
@@ -139,7 +138,7 @@
                 <a class="sort-type__link" href="#">По типу</a>
               </li>
               <li class="sort-type__item">
-                <a class="sort-type__link" href="#">По рейтингу</a>
+                <a class="sort-type__link" href="#">По названию</a>
               </li>
             </ul>
 
@@ -158,67 +157,68 @@
           <li class="catalog-list__item card-product">
             <img class="card-product__image" src="img/img-sedona.jpg" alt="Sedona" width="360" height="576">
             <div class="card-product__description">
-              <h2 class="card-product__title">Sedona</h2>
-              <p class="card-product__text">Информационный сайт для туристов</p>
-              <a href="#" class="card-product__link button button--red">9 900 руб.</a>
+              <h3 class="card-product__title">Sedona</h3>
+              <p class="card-product__text">Информационный сайт
+                <br>для туристов</p>
+              <a href="#" class="card-product__button button button--red">9 900 руб.</a>
             </div>
           </li>
           <li class="catalog-list__item card-product">
             <img class="card-product__image" src="img/img-pink.jpg" alt="Pink App" width="360" height="576">
             <div class="card-product__description">
-              <h2 class="card-product__title">Pink App</h2>
+              <h3 class="card-product__title">Pink App</h3>
               <p class="card-product__text">Продуктовый лендинг приложения для iOS и Android</p>
-              <a href="#" class="card-product__link button button--red">9 900 руб.</a>
+              <a href="#" class="card-product__button button button--red">9 900 руб.</a>
             </div>
           </li>
           <li class="catalog-list__item card-product">
             <img class="card-product__image" src="img/img-barbershop.jpg" alt="Barbershop" width="360" height="576">
             <div class="card-product__description">
-              <h2 class="card-product__title">Barbershop</h2>
+              <h3 class="card-product__title">Barbershop</h3>
               <p class="card-product__text">Сайт салона красоты.
                 <br>Для мужчин, да.</p>
-              <a href="#" class="card-product__link button button--red">9 900 руб.</a>
+              <a href="#" class="card-product__button button button--red">9 900 руб.</a>
             </div>
           </li>
           <li class="catalog-list__item card-product">
             <img class="card-product__image" src="img/img-mishka.jpg" alt="Mishka" width="360" height="576">
             <div class="card-product__description">
-              <h2 class="card-product__title">Mishka</h2>
+              <h3 class="card-product__title">Mishka</h3>
               <p class="card-product__text">Интернет-магазин
                 <br>вязаных игрушек</p>
-              <a href="#" class="card-product__link button button--red">9 900 руб.</a>
+              <a href="#" class="card-product__button button button--red">9 900 руб.</a>
             </div>
           </li>
           <li class="catalog-list__item card-product">
             <img class="card-product__image" src="img/img-aplus.jpg" alt="A Plus" width="360" height="576">
             <div class="card-product__description">
-              <h2 class="card-product__title">A Plus</h2>
+              <h3 class="card-product__title">A Plus</h3>
               <p class="card-product__text">Лендинг курсов повышения квалификации</p>
-              <a href="#" class="card-product__link button button--red">9 900 руб.</a>
+              <a href="#" class="card-product__button button button--red">9 900 руб.</a>
             </div>
           </li>
           <li class="catalog-list__item card-product">
             <img class="card-product__image" src="img/img-kvast.jpg" alt="Кваст" width="360" height="576">
             <div class="card-product__description">
-              <h2 class="card-product__title">Кваст</h2>
+              <h3 class="card-product__title">Кваст</h3>
               <p class="card-product__text">Промо-сайт производителя крафтового кваса</p>
-              <a href="#" class="card-product__link button button--red">9 900 руб.</a>
+              <a href="#" class="card-product__button button button--red">9 900 руб.</a>
             </div>
           </li>
         </ul>
 
         <ul class="pagination">
           <li class="pagination__item">
-            <a class="pagination__link pagination__link--current">1</a>
+            <a class="button button--gray pagination__button pagination__button--current">1</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link" href="#">2</a>
+            <a class="button button--gray pagination__button" href="#">2</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link" href="#">3</a>
+            <a class="button button--gray pagination__button" href="#">3</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__direction pagination__direction--next" href="#">Следующая</a>
+            <a class="button button--gray pagination__button-next" href="#">Следующая</a>
           </li>
         </ul>
       </section>

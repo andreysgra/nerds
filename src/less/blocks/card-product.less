@@ -1,0 +1,66 @@
+.card-product {
+  position: relative;
+  width: 360px;
+  border-top: 40px solid rgba(77, 77, 77, 0.12);
+  border-radius: 3px;
+
+  &:hover {
+    border-top-color: rgba(77, 77, 77, 1);
+    .ps-drop-shadow(#000101; 25%; 90deg; 6px; 0; 15px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: -27px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: @white;
+    box-shadow: 23px 0 0 @white, 46px 0 0 @white;
+  }
+}
+
+.card-product__image {
+  display: block;
+  width: 360px;
+  height: 576px;
+}
+
+.card-product__description {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 11px 60px;
+  min-height: 231px;
+  width: 100%;
+  text-align: center;
+  background-color: @bg-color-header;
+  opacity: 0;
+
+  .card-product:hover & {
+    opacity: 1;
+  }
+}
+
+.card-product__title {
+  margin-top: 15px;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  color: @font-color-heading;
+  text-transform: uppercase;
+}
+
+.card-product__text {
+  line-height: 18px;
+  color: @font-color-contact;
+}
+
+.card-product__button {
+  margin-top: 14px;
+  padding: 16px 60px;
+}

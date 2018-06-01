@@ -83,7 +83,7 @@
   </header>
 
   <main class="page-main">
-    <div class="content-wrapper">
+    <div class="content-wrapper page-main__content-wrapper">
       <ul class="offers">
         <li class="offers__item">
           <img class="offers__img" src="img/main-websites.jpg" alt="Веб-сайты" width="300" height="146">
@@ -108,51 +108,53 @@
       <section class="company">
         <h2 class="visually-hidden">Наши основные принципы</h2>
 
-        <div class="company__left-column">
-          <p class="company__caption">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+        <div class="company__column-wrapper">
+          <div class="company__left-column">
+            <p class="company__caption">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
 
-          <p class="company__text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая
-            рук, как роботы.
-          </p>
+            <p class="company__text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая
+              рук, как роботы.
+            </p>
 
-          <h3 class="company__title">Выполняем заказы на разработку:</h3>
+            <h3 class="company__title">Выполняем заказы на разработку:</h3>
 
-          <ul class="company__list">
-            <li class="company__list-item">Веб-сайтов любой сложности</li>
-            <li class="company__list-item">Мобильных приложений для iOS и Android</li>
-            <li class="company__list-item">Слайдшоу и видео для корпоративных презентаций</li>
-          </ul>
-        </div>
-
-        <div class="company__right-column">
-          <div class="company__logo">
-            <img class="company__image" src="img/main-logo.jpg" alt="Логотип дизайн-студии «Нёрдс»" width="360" height="208">
+            <ul class="company__list">
+              <li class="company__list-item">Веб-сайтов любой сложности</li>
+              <li class="company__list-item">Мобильных приложений для iOS и Android</li>
+              <li class="company__list-item">Слайдшоу и видео для корпоративных презентаций</li>
+            </ul>
           </div>
 
-          <h3 class="company__title company__title--center">С 2004 года любим точность во всем:</h3>
+          <div class="company__right-column">
+            <div class="company__logo">
+              <img class="company__image" src="img/main-logo.jpg" alt="Логотип дизайн-студии «Нёрдс»" width="360" height="208">
+            </div>
 
-          <table class="table-indication company__indication">
-            <thead>
-              <tr>
-                <th class="table-indication__header">Уровень самоотдачи</th>
-                <th class="table-indication__header">Соблюдение сроков</th>
-                <th class="table-indication__header">Минимальная предоплата</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="table-indication__cell">146
-                  <sup>%</sup>
-                </td>
-                <td class="table-indication__cell">100
-                  <sup>%</sup>
-                </td>
-                <td class="table-indication__cell">50
-                  <sup>%</sup>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            <h3 class="company__title company__title--center">С 2004 года любим точность во всем:</h3>
+
+            <table class="table-indication company__indication">
+              <thead>
+                <tr>
+                  <th class="table-indication__header">Уровень самоотдачи</th>
+                  <th class="table-indication__header">Соблюдение сроков</th>
+                  <th class="table-indication__header">Минимальная предоплата</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="table-indication__cell">146
+                    <sup>%</sup>
+                  </td>
+                  <td class="table-indication__cell">100
+                    <sup>%</sup>
+                  </td>
+                  <td class="table-indication__cell">50
+                    <sup>%</sup>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
@@ -243,8 +245,7 @@
     <div class="form-feedback__row">
       <div class="form-feedback__column">
         <label class="form-feedback__label" for="feedback-name">Ваше имя:</label>
-        <input class="form-feedback__text" type="text" name="name" id="feedback-name" value="" placeholder="Имя Фамилия"
-          required>
+        <input class="form-feedback__text" type="text" name="name" id="feedback-name" value="" placeholder="Имя Фамилия" required>
       </div>
 
       <div class="form-feedback__column">

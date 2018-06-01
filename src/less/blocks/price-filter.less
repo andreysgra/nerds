@@ -1,0 +1,76 @@
+.price-filter {
+  width: 260px;
+}
+
+.price-filter__range {
+  margin-bottom: 13px;
+  padding: 39px 18px;
+  border-radius: 3px;
+  background-color: @bg-color-header;
+}
+
+.price-filter__range-scale {
+  position: relative;
+  height: 2px;
+  background-color: @border-color-input;
+}
+
+.price-filter__range-bar {
+  height: 2px;
+  width: 64%;
+  background-color: @bg-color-button-green;
+}
+
+.price-filter__range-handle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  box-sizing: content-box;
+  width: 4px;
+  height: 4px;
+  border: 8px solid @white;
+  border-radius: 50%;
+  background-color: @bg-color-range-handle;
+  box-shadow: 0 2px 0 0 rgba(0, 1, 1, 0.14);
+  cursor: pointer;
+
+  &--min {
+    left: 0%;
+  }
+
+  &--max {
+    left: 64%;
+  }
+}
+
+.price-filter__interval {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.price-filter__label {
+  display: block;
+  width: 50%;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+
+  &--max-price {
+    text-align: right;
+  }
+}
+
+.price-filter__input {
+  margin-left: 8px;
+  width: 80px;
+  height: 38px;
+  border-radius: 2px;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  text-align: center;
+  background-color: @bg-color-header;
+}

@@ -1,0 +1,27 @@
+.sort-type {
+  display: flex;
+  flex-wrap: wrap;
+  .list-reset();
+
+  width: 300px;
+}
+
+.sort-type__item {
+  padding-right: 25px;
+}
+
+.sort-type__link {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: fade(@font-color-heading, 30%);
+
+  &:active,
+  &--active {
+    color: @font-color-heading;
+  }
+
+  &:hover:not(&--active) {
+    color: fade(@font-color-heading, 60%);
+  }
+}

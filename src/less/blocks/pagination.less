@@ -1,0 +1,31 @@
+.pagination {
+  display: flex;
+  .list-reset();
+}
+
+.pagination__item {
+  margin-right: 12px;
+}
+
+.pagination__button {
+  padding: 16px 20px;
+
+  &--current {
+    background-color: @white;
+    box-shadow: inset 3px 3px 0 #dbdbdb, inset -3px -3px 0 #dbdbdb;
+
+    &:hover {
+      background-color: @white;
+    }
+
+    &:active {
+      color: @font-color-heading;
+      background-color: @white;
+      box-shadow: inset 3px 3px 0 #dbdbdb, inset -3px -3px 0 #dbdbdb;
+    }
+  }
+}
+
+.pagination__button-next {
+  padding: 16px 78px;
+}

@@ -1,0 +1,33 @@
+.sort-direction {
+  display: flex;
+  justify-content: flex-end;
+  .list-reset();
+
+  width: 60px;
+}
+
+.sort-direction__item {
+  padding-left: 19px;
+}
+
+.sort-direction__link {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 5.5px solid transparent;
+  border-right: 5.5px solid transparent;
+  border-bottom: 10px solid fade(@black, 20%);
+
+  &:active,
+  &--active {
+    border-bottom-color: @black;
+  }
+
+  &:hover:not(&--active) {
+    border-bottom-color: @bg-color-sort-direction;
+  }
+
+  &--descending {
+    transform: rotate(180deg);
+  }
+}

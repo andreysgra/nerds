@@ -29,7 +29,8 @@ let projectDirs = {
     js: rootDirs.build + "js/",
     img: rootDirs.build + "img/",
     webp: rootDirs.build + "img/content/",
-    icons: rootDirs.build + "img/icons/"
+    icons: rootDirs.build + "img/icons/",
+    fonts: rootDirs.build + "fonts/"
   }
 };
 
@@ -43,15 +44,25 @@ gulp.task("clean:icons", function() {
   return del(projectDirs.build.img + "icons");
 });
 
-// Копирование файлов
-gulp.task("copy", function() {
-  console.log("Копирование файлов...");
+// Копирование шрифтов
+gulp.task("copy:fonts", function() {
+  console.log("Копирование шрифтов...");
 
   return gulp
-    .src([projectDirs.src.fonts + "**/*.{woff,woff2}"], {
-      base: projectDirs.src.root
-    })
-    .pipe(gulp.dest(projectDirs.build.root));
+    .src(projectDirs.src.fonts + "**/*.{woff,woff2}")
+    .pipe(gulp.dest(projectDirs.build.fonts));
+});
+
+// Копирование JS-файлов
+gulp.task("copy:js", function() {
+  console.log("Копирование JS-файлов...");
+
+  return gulp
+    .src([
+      "node_modules/svg4everybody/dist/svg4everybody.min.js",
+      "node_modules/babel-polyfill/dist/polyfill.min.js"
+    ])
+    .pipe(gulp.dest(projectDirs.build.js));
 });
 
 // Минификация HTML
@@ -117,16 +128,18 @@ gulp.task("style", function() {
 // Минификация JS скриптов
 gulp.task("js", function() {
   const uglify = require("gulp-uglify");
+  const babel = require("gulp-babel");
+  const sourcemaps = require("gulp-sourcemaps");
 
   console.log("Минификация JS...");
 
   return gulp
-    .src([
-      "node_modules/svg4everybody/dist/svg4everybody.js",
-      projectDirs.src.js + "**/*.js"
-    ])
+    .src([projectDirs.src.js + "**/*.js"])
+    .pipe(sourcemaps.init())
+    .pipe(babel())
     .pipe(concat("index.js"))
     .pipe(uglify())
+    .pipe(sourcemaps.write("."))
     .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest(projectDirs.build.js))
     .pipe(browserSync.stream());
@@ -191,7 +204,8 @@ gulp.task("serve", function() {
 gulp.task("build", function(callback) {
   run(
     "clean",
-    "copy",
+    "copy:fonts",
+    "copy:js",
     "html",
     "style",
     "js",

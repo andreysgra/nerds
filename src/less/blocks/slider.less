@@ -26,7 +26,12 @@
   background-color: @white;
   cursor: pointer;
 
-  &--active::after {
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 3px 2px fade(@black, 20%);
+  }
+
+  &--current::after {
     content: "";
     position: absolute;
     left: 50%;

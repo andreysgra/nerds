@@ -1,5 +1,9 @@
 .slide {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
   padding-bottom: 80px;
   background-position: 93% 100%;
   background-repeat: no-repeat;
@@ -16,8 +20,12 @@
     background-image: url("../img/bg-slide-03.png");
   }
 
-  &--current {
-    display: block;
+  &--visible {
+    animation: fading-in 1.75s ease-in-out forwards;
+  }
+
+  &--hidden {
+    animation: fading-out 1.75s ease-in-out forwards;
   }
 }
 

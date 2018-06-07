@@ -22,19 +22,24 @@
   "homepage": "https://github.com/andreysgra/nerds#readme",
   "devDependencies": {
     "autoprefixer": "^8.5.2",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.24.4",
     "css-mqpacker": "^6.0.2",
     "del": "^3.0.0",
     "gh-pages": "^1.1.0",
     "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
+    "gulp-htmlmin": "^4.0.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-less": "^3.5.0",
     "gulp-lintspaces": "^1.0.0",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.3",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-svgstore": "^6.1.1",
     "gulp-uglify": "^3.0.0",
     "imagemin-jpegoptim": "^5.2.0",
@@ -43,10 +48,24 @@
     "stylelint-config-standard": "^18.2.0"
   },
   "dependencies": {
-    "gulp-htmlmin": "^4.0.0",
+    "babel-polyfill": "^6.26.0",
     "svg4everybody": "^2.1.9"
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "defaults"
+            ]
+          }
+        }
+      ]
+    ]
+  }
 }

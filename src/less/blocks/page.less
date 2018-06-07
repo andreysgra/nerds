@@ -10,21 +10,17 @@
 
 .page__form-feedback {
   position: fixed;
-  display: none;
+  visibility: hidden;
   z-index: 100;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
 
-.page__modal-overlay {
-  position: fixed;
-  display: none;
-  z-index: 90;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: @black;
-  opacity: 0.4;
+  &--opened {
+    animation: slide-in-left 0.75s ease-in-out forwards;
+  }
+
+  &--closed {
+    animation: slide-in-right 0.75s ease-in-out forwards;
+  }
 }

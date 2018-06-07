@@ -45,6 +45,7 @@
   position: relative;
   padding-left: 37px;
   line-height: 20px;
+  transition: color 0.5s linear;
   cursor: pointer;
 
   &:disabled {
@@ -59,10 +60,15 @@
     transform: translateY(-50%);
     background-repeat: no-repeat;
     opacity: 0.4;
+    transition: opacity 0.5s linear;
   }
 
-  &:hover::before {
-    opacity: 1;
+  &:hover {
+    color: @font-color-heading;
+
+    &::before {
+      opacity: 1;
+    }
   }
 }
 

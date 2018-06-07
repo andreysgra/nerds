@@ -38,7 +38,7 @@
       </nav>
 
       <div class="slider">
-        <div class="slider__slide slide slide--current">
+        <div class="slider__slide slide slide--visible">
           <div class="slide__content">
             <p class="slide__caption">Долго, дорого, скрупулезно</p>
 
@@ -72,7 +72,7 @@
         </div>
 
         <div class="slider__controls">
-          <button class="slider__controls-button slider__controls-button--active" aria-label="1"></button>
+          <button class="slider__controls-button slider__controls-button--current" aria-label="1"></button>
           <button class="slider__controls-button" aria-label="2"></button>
           <button class="slider__controls-button" aria-label="3"></button>
         </div>
@@ -202,7 +202,7 @@
             <a href="tel:+78122757575">+7 (812) 275-75-75</a>
           </p>
 
-          <a class="button button--red contacts__button" href="#">Напишите нам</a>
+          <a class="button button--red contacts__button" href="#" id="contacts-button">Напишите нам</a>
         </div>
       </div>
     </section>
@@ -265,9 +265,10 @@
     <button class="form-feedback__close" aria-label="Закрыть" type="button"></button>
   </form>
 
-  <div class="page__modal-overlay"></div>
-
+  <script src="js/svg4everybody.min.js"></script>
+  <script src="js/polyfill.min.js"></script>
   <script src="js/index.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=init" async></script>
 </body>
 
 </html>

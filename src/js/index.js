@@ -1,7 +1,5 @@
 "use strict";
 
-// svg4everybody();
-
 (function() {
   // Форма обратной связи
   const contactsButton = document.getElementById("contacts-button");
@@ -14,10 +12,9 @@
   }
 
   function openFormFeedback(event) {
-    let element = event.target;
-
     event.preventDefault();
     formFeedback.classList.add("page__form-feedback--opened");
+    formFeedback.classList.remove("page__form-feedback--closed");
   }
 
   function closeFormFeedback(event) {
@@ -29,6 +26,7 @@
     ) {
       event.preventDefault();
       formFeedback.classList.remove("page__form-feedback--opened");
+      formFeedback.classList.add("page__form-feedback--closed");
     }
   }
 
@@ -78,6 +76,7 @@
 })();
 
 svg4everybody();
+
 // Яндекс карта
 function init(ymaps) {
   let map = new ymaps.Map("map", {

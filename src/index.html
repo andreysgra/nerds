@@ -108,8 +108,8 @@
       <section class="company">
         <h2 class="visually-hidden">Наши основные принципы</h2>
 
-        <div class="company__column-wrapper">
-          <div class="company__left-column">
+        <div class="company__column-wrapper"> <!-- Специально для IE -->
+          <div class="company__about">
             <p class="company__caption">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
 
             <p class="company__text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая
@@ -125,14 +125,13 @@
             </ul>
           </div>
 
-          <div class="company__right-column">
+          <div class="company__statistics">
             <div class="company__logo">
               <img class="company__image" src="img/main-logo.jpg" alt="Логотип дизайн-студии «Нёрдс»" width="360" height="208">
             </div>
 
-            <h3 class="company__title company__title--center">С 2004 года любим точность во всем:</h3>
-
             <table class="table-indication company__indication">
+              <caption class="table-indication__caption">С 2004 года любим точность во всем:</caption>
               <thead>
                 <tr>
                   <th class="table-indication__header">Уровень самоотдачи</th>
@@ -191,7 +190,7 @@
 
       <div class="map__interactive" id="map"></div>
 
-      <div class="map__contacts-wrapper">
+      <div class="map__contacts-wrapper content-wrapper">
         <div class="contacts">
           <p class="contacts__caption">Nёrds design studio</p>
 
@@ -207,7 +206,7 @@
       </div>
     </section>
 
-    <div class="page-footer__social">
+    <div class="page-footer__social content-wrapper">
       <ul class="social-links">
         <li class="social-links__item">
           <a class="social-links__link" href="https://vk.com" aria-label="ВКонтакте">

@@ -161,7 +161,7 @@ gulp.task("images", function() {
             { removeViewBox: false },
             { removeTitle: true },
             {
-              cleanupNumericValues: { floatPrecision: 0 }
+              cleanupNumericValues: { floatPrecision: 1 }
             }
           ]
         }),

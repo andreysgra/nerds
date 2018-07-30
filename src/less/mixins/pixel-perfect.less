@@ -1,0 +1,59 @@
+.getDeviceType(@device-type) when not (@device-types = "") {
+  @device: ~"@{divider}@{device-type}";
+}
+
+.getDeviceType(@device-type) when (default()) {
+  @device: "";
+}
+
+.getProjetName(@project-name) when not (@project-name = "") {
+  @project: ~"@{project-name}@{divider}";
+}
+
+.getProjetName(@project-name) when (default()) {
+  @project: "";
+}
+
+.generate-mq(@page; @i: 2) when (@i =< length(@device-types)) {
+  @device-type: extract(@device-types, @i);
+  @device-width: extract(@device-widths, (@i - 1));
+
+  .getDeviceType(@device-type);
+
+  @media (min-width: @device-width) {
+    &--@{page} {
+      background-image: url(@path);
+    }
+  }
+
+  .generate-mq(@page; @i + 1);
+}
+
+.generate-modifier(@i: 1) when (@i =< length(@pages)) {
+  @page: extract(@pages, @i);
+  @device-type: extract(@device-types, 1);
+
+  .getProjetName(@project-name);
+
+  .getDeviceType(@device-type);
+
+  @path: "../@{image-folder}/@{project}@{page}@{device}.@{ext}";
+
+  &--@{page} {
+    background-image: url(@path);
+  }
+
+  .generate-mq(@page);
+
+  .generate-modifier(@i + 1);
+}
+
+.pixel-perfect(@project-name: ""; @pages: index; @device-types: ""; @device-widths: ""; @divider: "-"; @image-folder: "img"; @ext: "jpg") {
+  .page {
+    background-position: center top;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+
+    .generate-modifier();
+  }
+}

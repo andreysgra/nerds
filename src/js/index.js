@@ -32,13 +32,13 @@
 
   // Слайдер
   const sliderControls = document.querySelector(".slider__controls");
-  let slides = Array.prototype.slice.call(document.querySelectorAll(".slide"));
-  let sliderButtons = Array.prototype.slice.call(
+  let slides = Array.from(document.querySelectorAll(".slide"));
+  let sliderButtons = Array.from(
     document.querySelectorAll(".slider__controls-button")
   );
 
   if (slides && sliderButtons && sliderControls) {
-    sliderControls.addEventListener("click", changeSlides);
+    sliderControls.addEventListener("click", changeSlide);
   }
 
   function findCurrentButton(element, index, array) {
@@ -49,7 +49,7 @@
     return element.classList.contains("slide--visible");
   }
 
-  function changeSlides(event) {
+  function changeSlide(event) {
     let element = event.target;
 
     if (element.classList.contains("slider__controls-button")) {

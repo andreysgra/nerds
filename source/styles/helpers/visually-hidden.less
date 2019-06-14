@@ -1,0 +1,16 @@
+/* stylelint-disable */
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden,
+input[type="file"].visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

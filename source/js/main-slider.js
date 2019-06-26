@@ -26,9 +26,8 @@
       event.preventDefault();
 
       let indexNextButton = sliderButtons.indexOf(element);
-      let indexCurrentButton = sliderButtons.indexOf(
-        sliderButtons.find(findCurrentButton)
-      );
+      let indexCurrentButton = sliderButtons.indexOf(sliderButtons.find(findCurrentButton));
+
       sliderButtons[indexCurrentButton].classList.remove(
         'slider__controls-button--current'
       );
@@ -37,11 +36,11 @@
       );
 
       let indexCurrentSlide = slides.indexOf(slides.find(findCurrentSlide));
+
       slides[indexCurrentSlide].classList.remove('slide--visible');
       slides[indexCurrentSlide].classList.add('slide--hidden');
       slides[indexNextButton].classList.add('slide--visible');
       slides[indexNextButton].classList.remove('slide--hidden');
     }
   }
-
 })();

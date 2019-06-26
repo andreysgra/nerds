@@ -32,23 +32,25 @@
 .card-product__description {
   position: absolute;
   left: 0;
+  right: 0;
   bottom: 0;
-  box-sizing: border-box;
-  padding: 11px 60px 39px;
-  width: 100%;
+  padding: 11px 60px 42px;
   text-align: center;
   background-color: @bg-color-header;
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
 
-  .card-product:hover &,
+  .card-product:hover & {
+    opacity: 1;
+  }
+
   .card-product:focus-within & {
     opacity: 1;
   }
 }
 
 .card-product__title {
-  margin-top: 15px;
+  margin-top: 16px;
   margin-bottom: 16px;
   font-size: 18px;
   font-weight: 700;
@@ -57,9 +59,21 @@
   text-transform: uppercase;
 }
 
+.card-product__link {
+  color: @font-color-menu;
+  text-decoration: none;
+
+  &:hover {
+    color: @font-color-menu--hover;
+  }
+
+  &:active {
+    color: @font-color-menu--active;
+  }
+}
+
 .card-product__text {
-  overflow-y: auto;
-  min-height: 40px;
+  overflow: hidden;
   max-height: 380px;
   line-height: 18px;
   color: @font-color-contact;

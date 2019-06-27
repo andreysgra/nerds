@@ -1,13 +1,9 @@
 .company {
+  display: flex;
+  flex-wrap: wrap;
   padding-top: 40px;
   padding-bottom: 50px;
   border-bottom: 2px solid @bg-color-header;
-}
-
-.company__column-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .company__about {
@@ -15,6 +11,7 @@
 }
 
 .company__statistics {
+  margin-left: auto;
   width: 360px;
 }
 
@@ -62,12 +59,12 @@
   }
 }
 
-.company__logo {
-  margin-bottom: 36px;
-}
-
 .company__image {
   display: block;
   width: 360px;
   height: 208px;
+}
+
+.company__table-indication {
+  margin-top: 36px;
 }

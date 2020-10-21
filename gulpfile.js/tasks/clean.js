@@ -1,7 +1,9 @@
 'use strict';
 
-const settings = require('../settings');
-const { task } = require('gulp');
+const { paths: { desination } } = require('../settings');
 const del = require('del');
 
-task('clean', () => del(settings.paths.dest.root));
+// Удаление каталога сборки
+const clean = () => del(desination.root);
+
+module.exports = clean;

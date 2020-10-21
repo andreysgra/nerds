@@ -7,7 +7,7 @@ const dirs = {
 
 module.exports = {
   paths: {
-    src: {
+    source: {
       root: dirs.src,
       styles: dirs.src + 'styles/',
       scripts: dirs.src + 'js/',
@@ -18,7 +18,7 @@ module.exports = {
       },
       fonts: dirs.src + 'fonts/'
     },
-    dest: {
+    desination: {
       root: dirs.dest,
       styles: dirs.dest + 'css/',
       scripts: dirs.dest + 'js/',
@@ -29,11 +29,5 @@ module.exports = {
       fonts: dirs.dest + 'fonts/'
     },
     dist: './dist'
-  },
-  vendor: {
-    scripts: [
-      './node_modules/svg4everybody/dist/svg4everybody.min.js',
-      './node_modules/@babel/polyfill/dist/polyfill.min.js'
-    ]
   }
 };

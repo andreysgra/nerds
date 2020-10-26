@@ -1,51 +1,46 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Каталог шаблонов</title>
+    <title>Дизайн-студия «Нёрдс»: Каталог шаблонов</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
-  <body class="page">
+  <body class="page-body">
     <header class="page-header">
       <div class="content-wrapper">
         <nav class="main-nav">
-          <a class="logo" href="index.html">
-            <img class="logo__image" src="img/nerds-logo.svg" alt="Логотип дизайн-студии «Нёрдс»" width="160"
+          <a class="header-logo" href="index.html">
+            <img class="header-logo__image" src="img/nerds-logo.svg" alt="Логотип дизайн-студии «Нёрдс»" width="160"
               height="65">
           </a>
 
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Студия</a>
+          <ul class="main-nav__list main-menu">
+            <li class="main-menu__item">
+              <a class="main-nav__link" href="blank.html">Студия</a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Клиенты</a>
+            <li class="main-menu__item">
+              <a class="main-nav__link" href="blank.html">Клиенты</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-menu__item">
               <a class="main-nav__link main-nav__link--current">Магазин</a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Контакты</a>
+            <li class="main-menu__item">
+              <a class="main-nav__link" href="blank.html">Контакты</a>
             </li>
           </ul>
 
           <div class="main-nav__user">
-            <a class="main-nav__user-cart main-nav__link" href="#">Корзина</a>
+            <a class="main-nav__link main-nav__link--icon main-nav__link--icon-cart" href="blank.html">Корзина</a>
           </div>
         </nav>
-
-        <div class="page-header__title-wrapper">
-          <h1 class="page-header__title">Магазин готовых шаблонов</h1>
-        </div>
       </div>
     </header>
 
     <main class="page-main">
-      <div class="catalog page-main__catalog content-wrapper">
+      <!-- <div class="catalog page-main__catalog content-wrapper">
         <form class="form-filters" action="https://echo.htmlacademy.ru" method="GET">
           <fieldset class="form-filters__fieldset form-filters__price">
             <legend class="form-filters__legend">Стоимость:</legend>
@@ -242,51 +237,52 @@
             </li>
           </ul>
         </section>
-      </div>
+      </div> -->
     </main>
 
     <footer class="page-footer">
       <section class="map">
-        <h2 class="visually-hidden">Как к нам добраться</h2>
+        <h2 class="visually-hidden">Как нас найти</h2>
 
-        <img class="map__image" src="img/bg-map.png" alt="Месторасположение офиса" width="1440" height="416">
+        <picture>
+          <source type="image/webp" srcset="img/content/bg-map.webp">
+          <img class="map__image" src="img/content/bg-map.png"
+            alt="Офис по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" width="1440" height="416">
+        </picture>
 
         <div class="map__interactive" id="map"></div>
-
-        <div class="map__contacts-wrapper content-wrapper">
-          <div class="contacts">
-            <p class="contacts__caption">Nёrds design studio</p>
-
-            <p class="contacts__text">191186, Санкт-Петербург,
-              <br>ул. Б. Конюшенная, д. 19/8</p>
-
-            <p class="contacts__text">тел.&nbsp;
-              <a class="contacts__link" href="tel:+78122757575">+7 (812) 275-75-75</a>
-            </p>
-
-            <a class="button button--red contacts__button" href="#" id="contacts-button">Напишите нам</a>
-          </div>
-        </div>
       </section>
+
+      <div class="page-footer__contacts contacts">
+        <p class="contacts__title">Nёrds design studio</p>
+
+        <p class="contacts__text">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+
+        <p class="contacts__text">тел.&nbsp;
+          <a class="contacts__link" href="tel:+78122757575">+7 (812) 275-75-75</a>
+        </p>
+
+        <a class="contacts__button button button--red" href="feedback.html">Напишите нам</a>
+      </div>
 
       <div class="page-footer__social content-wrapper">
         <ul class="social-links">
           <li class="social-links__item">
-            <a class="social-links__link" href="https://vk.com" aria-label="ВКонтакте">
+            <a class="social-links__link" href="https://vk.com" aria-label="Мы в ВКонтакте">
               <svg class="social-links__icon" width="26" height="15">
                 <use xlink:href="img/symbols.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__link" href="https://www.facebook.com" aria-label="Facebook">
+            <a class="social-links__link" href="https://www.facebook.com" aria-label="Мы в Facebook">
               <svg class="social-links__icon" width="12" height="22">
                 <use xlink:href="img/symbols.svg#icon-fb"></use>
               </svg>
             </a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__link" href="https://www.instagram.com" aria-label="Instagram">
+            <a class="social-links__link" href="https://www.instagram.com" aria-label="Мы в Instagram">
               <svg class="social-links__icon" width="21" height="21">
                 <use xlink:href="img/symbols.svg#icon-insta"></use>
               </svg>
@@ -301,33 +297,36 @@
       </div>
     </footer>
 
-    <form class="form-feedback page__form-feedback" action="https://echo.htmlacademy.ru" method="POST">
-      <h2 class="form-feedback__caption">Напишите нам</h2>
+    <section class="page__modal modal-form">
+      <h2 class="modal-form__caption">Напишите нам</h2>
 
-      <div class="form-feedback__row">
-        <div class="form-feedback__column">
-          <label class="form-feedback__label" for="feedback-name">Ваше имя:</label>
-          <input class="form-feedback__text" type="text" name="name" id="feedback-name" placeholder="Имя Фамилия"
-            required>
+      <form class="form-feedback" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="form-feedback__content-wrapper">
+          <label class="form-feedback__label" for="feedback-name">
+            Ваше имя:
+            <input class="form-feedback__input form-input" type="text" name="name" id="feedback-name"
+              placeholder="Имя Фамилия" required>
+          </label>
+
+          <label class="form-feedback__label" for="feedback-email">
+            Ваш email:
+            <input class="form-feedback__input form-input" type="email" name="email" id="feedback-email"
+              placeholder="email@example.com" required>
+          </label>
+
+          <label class="form-feedback__label form-feedback__label-textarea" for="feedback-message">
+            Текст письма:
+            <textarea class="form-feedback__input form-input form-textarea" name="message" id="feedback-message"
+              placeholder="В свободной форме"></textarea>
+          </label>
         </div>
 
-        <div class="form-feedback__column">
-          <label class="form-feedback__label" for="feedback-email">Ваш e-mail:</label>
-          <input class="form-feedback__text" type="email" name="email" id="feedback-email"
-            placeholder="email@example.com" required>
-        </div>
-      </div>
 
-      <div class="form-feedback__row form-feedback__row-message">
-        <label class="form-feedback__label" for="feedback-message">Текст письма:</label>
-        <textarea class="form-feedback__text form-feedback__textarea" name="message" id="feedback-message"
-          placeholder="В свободной форме"></textarea>
-      </div>
+        <button class="button button--red form-feedback__button" type="submit">Отправить</button>
+      </form>
 
-      <button class="button button--red form-feedback__button" type="submit">Отправить</button>
-
-      <button class="form-feedback__close" aria-label="Закрыть" type="button"></button>
-    </form>
+      <button class="page__modal-button button-close" aria-label="Закрыть" type="button"></button>
+    </section>
 
     <script src="js/main.bundle.js"></script>
   </body>

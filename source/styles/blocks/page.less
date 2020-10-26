@@ -1,26 +1,33 @@
 .page {
-  margin: 0;
-  padding: 0;
-  min-width: 1200px;
+  height: 100%;
   font-family: @font-family-base;
   font-size: @font-size-base;
   line-height: @line-height-base;
   color: @font-color-base;
 }
 
-.page__form-feedback {
+.page__modal {
+  --block-width: 960px;
+
   position: fixed;
-  visibility: hidden;
   z-index: 100;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  visibility: hidden;
 
-  &--opened {
-    animation: slide-in-left 0.75s ease-in-out forwards;
+  &--visible {
+    animation: slide-from-left 0.75s ease-in-out forwards;
   }
 
-  &--closed {
-    animation: slide-in-right 0.75s ease-in-out forwards;
+  &--hidden {
+    animation: slide-to-left 0.75s ease-in-out forwards;
   }
+}
+
+.page__modal-button {
+  position: absolute;
+  z-index: 100;
+  top: 75px;
+  right: 88px;
 }

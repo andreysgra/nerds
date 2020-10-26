@@ -1,70 +1,71 @@
 .button {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   padding: 16px 40px;
-  border: 0;
+  border: none;
   border-radius: 3px;
-  font: inherit;
+  font-family: inherit;
+  font-size: 16px;
   font-weight: 500;
   line-height: 18px;
-  color: @font-color-button;
+  color: @color-white;
   text-transform: uppercase;
   text-decoration: none;
-  transition: 0.5s ease-in;
+  transition: 0.3s ease-in;
   cursor: pointer;
 
   &:active {
-    color: fade(@font-color-button, 30%);
-    .ps-inner-shadow(#000101; 10%; 90deg; 3px; 0; 0);
+    color: fade(@color-white, 30%);
+    box-shadow: inset 0 3px 0 fade(@color-black, 10%);
   }
 
   &--red {
-    background-color: @bg-color-button-red;
+    background-color: @color-red-light;
 
     &:hover {
-      background-color: @bg-color-button-red--hover;
+      background-color: @color-red;
     }
 
     &:active {
-      background-color: @bg-color-button-red--active;
+      background-color: @color-red-dark;
     }
   }
 
   &--green {
-    background-color: @bg-color-button-green;
+    background-color: @color-green-light;
 
     &:hover {
-      background-color: @bg-color-button-green--hover;
+      background-color: @color-green;
     }
 
     &:active {
-      background-color: @bg-color-button-green--active;
+      background-color: @color-green-dark;
     }
   }
 
   &--yellow {
-    background-color: @bg-color-button-yellow;
+    background-color: @color-yellow-light;
 
     &:hover {
-      background-color: @bg-color-button-yellow--hover;
+      background-color: @color-yellow;
     }
 
     &:active {
-      background-color: @bg-color-button-yellow--active;
+      background-color: @color-yellow-dark;
     }
   }
 
   &--gray {
-    color: @font-color-heading;
-    background-color: @bg-color-button-gray;
+    color: @color-black;
+    background-color: @color-gray;
 
     &:hover {
-      background-color: @bg-color-button-gray--hover;
+      background-color: @color-gray-light;
     }
 
     &:active {
-      color: fade(@font-color-heading, 30%);
-      background-color: @bg-color-button-gray;
+      color: fade(@color-black, 30%);
+      background-color: @color-gray-lighten;
     }
   }
 }

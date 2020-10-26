@@ -1,33 +1,29 @@
 .social-links {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 80px);
+  column-gap: 10px;
+  row-gap: 10px;
   .list-reset();
-
-  width: 360px;
-}
-
-.social-links__item {
-  margin-right: 13px;
 }
 
 .social-links__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 78px;
-  height: 78px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   color: currentColor;
-  background-color: @bg-color-button-social;
-  transition: 0.5s ease-in-out;
+  background-color: @color-gray-88;
+  transition: 0.3s ease-in-out;
 
   &:hover {
-    background-color: @bg-color-button-red--hover;
+    background-color: @color-red;
   }
 
   &:active {
-    background-color: @bg-color-button-red--active;
-    .ps-inner-shadow(#000101; 10%; 90deg; 3px; 0; 0);
+    background-color: @color-red-dark;
+    box-shadow: 0 3px 0 fade(@color-black, 10%) inset;
   }
 
   &:active .social-links__icon {

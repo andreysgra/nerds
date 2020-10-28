@@ -1,0 +1,25 @@
+.form-catalog-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 37px;
+  min-height: 25px;
+  line-height: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    transition: opacity 0.3s linear;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+}

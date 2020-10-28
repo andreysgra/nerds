@@ -40,24 +40,30 @@
     </header>
 
     <main class="page-main">
-      <!-- <div class="catalog page-main__catalog content-wrapper">
-        <form class="form-filters" action="https://echo.htmlacademy.ru" method="GET">
-          <fieldset class="form-filters__fieldset form-filters__price">
-            <legend class="form-filters__legend">Стоимость:</legend>
+      <div class="page-main__header">
+        <div class="content-wrapper">
+          <h1 class="page-main__title">Магазин готовых шаблонов</h1>
+        </div>
+      </div>
 
-            <div class="price-filter form-filters__price-filter">
+      <div class="page-main__catalog content-wrapper">
+        <form class="form-catalog" action="https://echo.htmlacademy.ru" method="GET">
+          <fieldset class="form-catalog__fieldset">
+            <legend class="form-catalog__legend">Стоимость:</legend>
+
+            <div class="form-catalog__price-filter price-filter">
               <div class="price-filter__range">
                 <div class="price-filter__range-scale">
-                  <div class="price-filter__range-bar"></div>
+                  <div class="price-filter__range-bar" style="width: 64%;"></div>
 
                   <button class="price-filter__range-handle price-filter__range-handle--min" type="button"
-                    aria-label="Минимально"></button>
+                    aria-label="Минимально" style="left: 0;"></button>
                   <button class="price-filter__range-handle price-filter__range-handle--max" type="button"
-                    aria-label="Максимально"></button>
+                    aria-label="Максимально" style="left: 64%;"></button>
                 </div>
               </div>
 
-              <p class="price-filter__interval">
+              <div class="price-filter__interval">
                 <label class="price-filter__label">От
                   <input class="price-filter__input" type="text" name="min-price" value="0">
                 </label>
@@ -65,179 +71,200 @@
                 <label class="price-filter__label price-filter__label--max-price">До
                   <input class="price-filter__input" type="text" name="max-price" value="15000">
                 </label>
-              </p>
+              </div>
             </div>
 
           </fieldset>
 
-          <fieldset class="form-filters__fieldset form-filters__grid">
-            <legend class="form-filters__legend">Сетка:</legend>
+          <fieldset class="form-catalog__fieldset">
+            <legend class="form-catalog__legend">Сетка:</legend>
 
-            <ul class="form-filters__input-wrapper">
-              <li class="form-filters__input-block">
-                <input class="form-filters__radio visually-hidden" type="radio" id="filter-adaptive" name="grid"
+            <ul class="form-catalog__list">
+              <li class="form-catalog__list-item form-catalog-radio">
+                <input class="form-catalog-radio__radio visually-hidden" type="radio" id="filter-adaptive" name="grid"
                   value="adaptive" checked>
-                <label class="form-filters__label form-filters__label-radio" for="filter-adaptive">Адаптивная</label>
+                <label class="form-catalog-radio__label form-catalog-label" for="filter-adaptive">Адаптивная</label>
               </li>
-              <li class="form-filters__input-block">
-                <input class="form-filters__radio visually-hidden" type="radio" id="filter-fixed" name="grid"
+              <li class="form-catalog__list-item form-catalog-radio">
+                <input class="form-catalog-radio__radio visually-hidden" type="radio" id="filter-fixed" name="grid"
                   value="fixed">
-                <label class="form-filters__label form-filters__label-radio" for="filter-fixed">Фиксированная</label>
+                <label class="form-catalog-radio__label form-catalog-label" for="filter-fixed">Фиксированная</label>
               </li>
-              <li class="form-filters__input-block">
-                <input class="form-filters__radio visually-hidden" type="radio" id="filter-fluid" name="grid"
-                  value="fluid">
-                <label class="form-filters__label form-filters__label-radio" for="filter-fluid">Резиновая</label>
+              <li class="form-catalog__list-item form-catalog-radio">
+                <input class="form-catalog-radio__radio visually-hidden" type="radio" id="filter-fluid" name="grid"
+                  value="fluid" disabled>
+                <label class="form-catalog-radio__label form-catalog-label" for="filter-fluid">Резиновая</label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="form-filters__fieldset form-filters__features">
-            <legend class="form-filters__legend">Особенности:</legend>
+          <fieldset class="form-catalog__fieldset">
+            <legend class="form-catalog__legend">Особенности:</legend>
 
-            <ul class="form-filters__input-wrapper">
-              <li class="form-filters__input-block">
-                <input class="form-filters__checkbox visually-hidden" type="checkbox" id="filter-slider" name="features"
-                  value="slider" checked>
-                <label class="form-filters__label form-filters__label-checkbox" for="filter-slider">Слайдер</label>
+            <ul class="form-catalog__list">
+              <li class="form-catalog__list-item form-catalog-checkbox">
+                <input class="form-catalog-checkbox__checkbox visually-hidden" type="checkbox" id="filter-slider" name="features" value="slider" checked>
+                <label class="form-catalog-checkbox__label form-catalog-label" for="filter-slider">Слайдер</label>
               </li>
-              <li class="form-filters__input-block">
-                <input class="form-filters__checkbox visually-hidden" type="checkbox" id="filter-features"
+              <li class="form-catalog__list-item form-catalog-checkbox">
+                <input class="form-catalog-checkbox__checkbox visually-hidden" type="checkbox" id="filter-features"
                   name="features" value="features">
-                <label class="form-filters__label form-filters__label-checkbox" for="filter-features">Блок
-                  преимуществ</label>
+                <label class="form-catalog-checkbox__label form-catalog-label" for="filter-features">Блок преимуществ</label>
               </li>
-              <li class="form-filters__input-block">
-                <input class="form-filters__checkbox visually-hidden" type="checkbox" id="filter-news" name="features"
-                  value="news" checked>
-                <label class="form-filters__label form-filters__label-checkbox" for="filter-news">Новости</label>
+              <li class="form-catalog__list-item form-catalog-checkbox">
+                <input class="form-catalog-checkbox__checkbox visually-hidden" type="checkbox" id="filter-news" name="features" value="news" checked>
+                <label class="form-catalog-checkbox__label form-catalog-label" for="filter-news">Новости</label>
               </li>
-              <li class="form-filters__input-block">
-                <input class="form-filters__checkbox visually-hidden" type="checkbox" id="filter-gallery"
-                  name="features" value="gallery">
-                <label class="form-filters__label form-filters__label-checkbox" for="filter-gallery">Галерея</label>
+              <li class="form-catalog__list-item form-catalog-checkbox">
+                <input class="form-catalog-checkbox__checkbox visually-hidden" type="checkbox" id="filter-gallery"
+                  name="features" value="gallery" disabled>
+                <label class="form-catalog-checkbox__label form-catalog-label" for="filter-gallery">Галерея</label>
               </li>
-              <li class="form-filters__input-block">
-                <input class="form-filters__checkbox visually-hidden" type="checkbox" id="filter-cart" name="features"
-                  value="cart">
-                <label class="form-filters__label form-filters__label-checkbox" for="filter-cart">Корзина</label>
+              <li class="form-catalog__list-item form-catalog-checkbox">
+                <input class="form-catalog-checkbox__checkbox visually-hidden" type="checkbox" id="filter-cart" name="features" value="cart">
+                <label class="form-catalog-checkbox__label form-catalog-label" for="filter-cart">Корзина</label>
               </li>
             </ul>
           </fieldset>
 
-          <button class="button button--gray form-filters__button" type="submit">Показать</button>
+          <button class="form-catalog__button button button--gray" type="submit">Показать</button>
         </form>
 
-        <section class="catalog__content">
+        <section class="catalog">
           <h2 class="visually-hidden">Каталог шаблонов</h2>
 
           <div class="catalog__header">
-            <p class="catalog__caption">Сортировать:</p>
+            <p class="catalog__title">Сортировать:</p>
 
-            <div class="catalog__sort-type-wrapper">
-              <ul class="catalog__sort-type sort-type">
-                <li class="sort-type__item">
-                  <a class="sort-type__link sort-type__link--active">По цене</a>
-                </li>
-                <li class="sort-type__item">
-                  <a class="sort-type__link" href="#">По типу</a>
-                </li>
-                <li class="sort-type__item">
-                  <a class="sort-type__link" href="#">По названию</a>
-                </li>
-              </ul>
+            <ul class="catalog__sort-type sort-type">
+              <li class="sort-type__item">
+                <a class="sort-type__link sort-type__link--active">По цене</a>
+              </li>
+              <li class="sort-type__item">
+                <a class="sort-type__link" href="blank.html">По типу</a>
+              </li>
+              <li class="sort-type__item">
+                <a class="sort-type__link" href="blank.html">По названию</a>
+              </li>
+            </ul>
 
-              <ul class="catalog__sort-direction sort-direction">
-                <li class="sort-direction__item">
-                  <a class="sort-direction__link sort-direction__link--descending sort-direction__link--active"
-                    aria-label="Вниз"></a>
-                </li>
-                <li class="sort-direction__item">
-                  <a class="sort-direction__link" href="#" aria-label="Вверх"></a>
-                </li>
-              </ul>
-            </div>
+            <ul class="sort-direction">
+              <li class="sort-direction__item">
+                <a class="sort-direction__link sort-direction__link--descending sort-direction__link--active">
+                  <span class="visually-hidden">Сортировать по возрастанию</span>
+                </a>
+              </li>
+              <li class="sort-direction__item">
+                <a class="sort-direction__link" href="blank.html">
+                  <span class="visually-hidden">Сортировать по убыванию</span>
+                </a>
+              </li>
+            </ul>
           </div>
 
-          <ul class="catalog-list">
-            <li class="catalog-list__item card-product">
-              <img class="card-product__image" src="img/img-sedona.jpg" alt="Sedona" width="360" height="576">
+          <ul class="catalog__list">
+            <li class="catalog__list-item card-product">
+              <picture>
+                <source type="image/webp" srcset="img/content/img-sedona.webp">
+                <img class="card-product__image" src="img/content/img-sedona.jpg" alt="Sedona" width="358" height="578">
+              </picture>
+
               <div class="card-product__description">
                 <h3 class="card-product__title">
-                  <a class="card-product__link" href="#">Sedona</a>
+                  <a class="card-product__link" href="blank.html">Sedona</a>
                 </h3>
                 <p class="card-product__text">Информационный сайт для&nbsp;туристов</p>
-                <a class="card-product__button button button--red" href="#">9 900 руб.</a>
+                <a class="card-product__button button button--red" href="blank.html">9 900 &#8381;</a>
               </div>
             </li>
-            <li class="catalog-list__item card-product">
-              <img class="card-product__image" src="img/img-pink.jpg" alt="Pink App" width="360" height="576">
+            <li class="catalog__list-item card-product">
+              <picture>
+                <source type="image/webp" srcset="img/content/img-pink.webp">
+                <img class="card-product__image" src="img/content/img-pink.jpg" alt="Pink App" width="358" height="578">
+              </picture>
+
               <div class="card-product__description">
                 <h3 class="card-product__title">
-                  <a class="card-product__link" href="#">Pink App</a>
+                  <a class="card-product__link" href="blank.html">Pink App</a>
                 </h3>
                 <p class="card-product__text">Продуктовый лендинг приложения для iOS и Android</p>
-                <a class="card-product__button button button--red" href="#">9 900 руб.</a>
+                <a class="card-product__button button button--red" href="blank.html">9 900 &#8381;</a>
               </div>
             </li>
-            <li class="catalog-list__item card-product">
-              <img class="card-product__image" src="img/img-barbershop.jpg" alt="Barbershop" width="360" height="576">
+            <li class="catalog__list-item card-product">
+              <picture>
+                <source type="image/webp" srcset="img/content/img-barbershop.webp">
+                <img class="card-product__image" src="img/content/img-barbershop.jpg" alt="Barbershop" width="358" height="578">
+              </picture>
+
               <div class="card-product__description">
                 <h3 class="card-product__title">
-                  <a class="card-product__link" href="#">Barbershop</a>
+                  <a class="card-product__link" href="blank.html">Barbershop</a>
                 </h3>
                 <p class="card-product__text">Сайт салона красоты. Для&nbsp;мужчин, да.</p>
-                <a class="card-product__button button button--red" href="#">9 900 руб.</a>
+                <a class="card-product__button button button--red" href="blank.html">9 900 &#8381;</a>
               </div>
             </li>
-            <li class="catalog-list__item card-product">
-              <img class="card-product__image" src="img/img-mishka.jpg" alt="Mishka" width="360" height="576">
+            <li class="catalog__list-item card-product">
+              <picture>
+                <source type="image/webp" srcset="img/content/img-mishka.webp">
+                <img class="card-product__image" src="img/content/img-mishka.jpg" alt="Mishka" width="358" height="578">
+              </picture>
+
               <div class="card-product__description">
                 <h3 class="card-product__title">
-                  <a class="card-product__link" href="#">Mishka</a>
+                  <a class="card-product__link" href="blank.html">Mishka</a>
                 </h3>
                 <p class="card-product__text">Интернет-магазин вязаных&nbsp;игрушек</p>
-                <a class="card-product__button button button--red" href="#">9 900 руб.</a>
+                <a class="card-product__button button button--red" href="blank.html">9 900 &#8381;</a>
               </div>
             </li>
-            <li class="catalog-list__item card-product">
-              <img class="card-product__image" src="img/img-aplus.jpg" alt="A Plus" width="360" height="576">
+            <li class="catalog__list-item card-product">
+              <picture>
+                <source type="image/webp" srcset="img/content/img-aplus.webp">
+                <img class="card-product__image" src="img/content/img-aplus.jpg" alt="Mishka" width="358" height="578">
+              </picture>
+
               <div class="card-product__description">
                 <h3 class="card-product__title">
-                  <a class="card-product__link" href="#">A Plus</a>
+                  <a class="card-product__link" href="blank.html">A Plus</a>
                 </h3>
                 <p class="card-product__text">Лендинг курсов повышения квалификации</p>
-                <a class="card-product__button button button--red" href="#">9 900 руб.</a>
+                <a class="card-product__button button button--red" href="blank.html">9 900 &#8381;</a>
               </div>
             </li>
-            <li class="catalog-list__item card-product">
-              <img class="card-product__image" src="img/img-kvast.jpg" alt="Кваст" width="360" height="576">
+            <li class="catalog__list-item card-product">
+              <picture>
+                <source type="image/webp" srcset="img/content/img-kvast.webp">
+                <img class="card-product__image" src="img/content/img-kvast.jpg" alt="Кваст" width="358" height="578">
+              </picture>
+
               <div class="card-product__description">
                 <h3 class="card-product__title">
-                  <a class="card-product__link" href="#">Кваст</a>
+                  <a class="card-product__link" href="blank.html">Кваст</a>
                 </h3>
                 <p class="card-product__text">Промо-сайт производителя крафтового кваса</p>
-                <a class="card-product__button button button--red" href="#">9 900 руб.</a>
+                <a class="card-product__button button button--red" href="blank.html">9 900 &#8381;</a>
               </div>
             </li>
           </ul>
 
           <ul class="pagination">
             <li class="pagination__item">
-              <a class="button button--gray pagination__button pagination__button--current">1</a>
+              <a class="pagination__button pagination__button--current button button--gray">1</a>
             </li>
             <li class="pagination__item">
-              <a class="button button--gray pagination__button" href="#">2</a>
+              <a class="pagination__button button button--gray" href="blank.html">2</a>
             </li>
             <li class="pagination__item">
-              <a class="button button--gray pagination__button" href="#">3</a>
+              <a class="pagination__button button button--gray" href="blank.html">3</a>
             </li>
             <li class="pagination__item">
-              <a class="button button--gray pagination__button-next" href="#">Следующая</a>
+              <a class="pagination__button-next button button--gray" href="blank.html">Следующая</a>
             </li>
           </ul>
         </section>
-      </div> -->
+      </div>
     </main>
 
     <footer class="page-footer">

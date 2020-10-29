@@ -1,0 +1,38 @@
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  width: 240px;
+  height: 18px;
+}
+
+.slider-controls__button {
+  margin-left: 9px;
+  margin-right: 9px;
+  width: 18px;
+  height: 18px;
+  border: 0;
+  border-radius: 50%;
+  background-color: @color-white;
+  outline: none;
+
+  &:focus {
+    box-shadow: 0 0 3px 2px fade(@color-black, 20%);
+  }
+
+  &--current {
+    position: relative;
+
+    &::before {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      border: 2px solid #c1c1c1;
+      border-radius: 50%;
+    }
+  }
+}

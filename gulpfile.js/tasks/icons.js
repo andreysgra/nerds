@@ -1,27 +1,29 @@
 'use strict';
 
-const settings = require('../settings');
-const { task, src, dest } = require('gulp');
+const { paths: { source, desination } } = require('../settings');
+const { src, dest } = require('gulp');
 const rename = require('gulp-rename');
 const gulpIf = require('gulp-if');
 const imagemin = require('gulp-imagemin');
 const svgstore = require('gulp-svgstore');
 
-const isProd = !!process.env.NODE_ENV;
+const isProd = Boolean(process.env.NODE_ENV);
 
 // Сборка SVG спрайта
-task('icons', () => {
-  let pluginsSvgo = [
+const icons = () => {
+  const pluginsSvgo = [
     { removeViewBox: false },
     { removeTitle: true },
     { cleanupNumericValues: { floatPrecision: 1 } }
   ];
 
-  let pluginsImagemin = [imagemin.svgo({ plugins: pluginsSvgo })];
+  const pluginsImagemin = [imagemin.svgo({ plugins: pluginsSvgo })];
 
-  return src(`${settings.paths.src.images.icons}**/*.svg`)
+  return src(`${source.images.icons}**/*.svg`)
     .pipe(gulpIf(isProd, imagemin(pluginsImagemin)))
     .pipe(svgstore({ inlineSvg: true }))
     .pipe(rename('symbols.svg'))
-    .pipe(dest(settings.paths.dest.images.all));
-});
+    .pipe(dest(desination.images.all));
+};
+
+module.exports = icons;

@@ -1,47 +1,34 @@
+:root {
+  --content-padding-desktop: 20px;
+  --content-width-desktop: ~"calc(@{desktop-width} - var(--content-padding-desktop) * 2)";
+}
+
+@desktop-width: 1200px;
+
 @font-family-base: "Roboto", "Tahoma", sans-serif;
+
 @font-size-base: 16px;
 @line-height-base: 24px;
 
-@black: #000000;
-@white: #ffffff;
+@color-black: #000000;
+@color-gray-lighten: #d5d5d5;
+@color-gray-light: #dfdfdf;
+@color-gray: #eeeeee;
+@color-gray-88: #e1e1e1;
+@color-gray-dark: #666666;
+@color-gray-darken: #444444;
+@color-gray-darkest: #283136;
+@color-green-light: #00ca74;
+@color-green: #00bc6c;
+@color-green-dark: #00aa62;
+@color-red-light: #fb565a;
+@color-red: #e74246;
+@color-red-dark: #d7373b;
+@color-yellow-light: #efc84a;
+@color-yellow: #eab534;
+@color-yellow-dark: #e5a722;
+@color-white: #ffffff;
 
-@bg-color-header: #eeeeee;
+@font-color-base: @color-gray-darkest;
 
-@bg-color-button-red: #fb565a;
-@bg-color-button-red--hover: #e74246;
-@bg-color-button-red--active: #d7373b;
-@bg-color-button-green: #00ca74;
-@bg-color-button-green--hover: #00bc6c;
-@bg-color-button-green--active: #00aa62;
-@bg-color-button-yellow: #efc84a;
-@bg-color-button-yellow--hover: #eab534;
-@bg-color-button-yellow--active: #e5a722;
-@bg-color-button-gray: #eeeeee;
-@bg-color-button-gray--hover: #dfdfdf;
-@bg-color-button-gray--active: #d5d5d5;
-
-@bg-color-button-social: #e1e1e1;
-
-@bg-color-range-handle: #b7b7b7;
-
-@bg-color-sort-direction: #a6a6a6;
-
-@border-color-input: #d7dcde;
-@border-color-input--hover:#b4b9bb;
-@border-color-input--focus: @black;
-@border-color-input--invalid: currentColor;
-
-@font-color-base: #283136;
-@font-color-heading: @black;
-
-@font-color-menu: @black;
-@font-color-menu--hover: #fb565a;
-@font-color-menu--active: fade(@black, 30%);
-
-@font-color-button: @white;
-
-@font-color-contact: #666666;
-
-@font-color-input: fade(#444444, 50%);
-@font-color-input--focus: #444444;
-@font-color-input--invalid: #e74246;
+@bg-color-body: @color-white;

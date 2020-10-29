@@ -38,7 +38,6 @@
 │   ├── js/           # каталог JS файлов
 │   ├── styles/       # каталог файлов стилей
 │   └── index.html    # файл разметки страницы
-├── .babelrc          # файл конфигурации Babel
 ├── .editorconfig     # файл конфигурации настроек редактора
 ├── .eslintrc.json    # файл конфигурации ESLint
 ├── .gitattributes    # файл атрибутов Git
@@ -49,7 +48,8 @@
 ├── package.json      # файл npm зависимостей и настроек проекта
 ├── package-lock.json # lock-файл npm
 ├── README.md         # документация проекта
-└── Specification.md  # техническое задание
+├── Specification.md  # техническое задание
+└── webpack.config.js # файл конфигурации Webpack
 ```
 
 [travis-image]: https://travis-ci.org/andreysgra/nerds.svg?branch=master

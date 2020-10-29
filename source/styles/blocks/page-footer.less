@@ -1,6 +1,18 @@
+.page-footer {
+  position: relative;
+}
+
+.page-footer__contacts {
+  position: absolute;
+  z-index: 20;
+  left: calc(50% - var(--content-width-desktop) / 2);
+  top: 54px;
+}
+
 .page-footer__social {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 69px;
-  padding-bottom: 65px;
+  display: grid;
+  grid-template-columns: 360px 760px;
+  column-gap: 40px;
+  align-items: center;
+  min-height: 220px;
 }

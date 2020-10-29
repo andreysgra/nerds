@@ -7,7 +7,7 @@
 }
 
 .sort-type__item {
-  padding-right: 25px;
+  margin-right: 25px;
 }
 
 .sort-type__link {
@@ -15,15 +15,15 @@
   line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
-  color: fade(@font-color-heading, 30%);
-  transition: color 0.5s linear;
+  color: fade(@color-black, 30%);
+  transition: color 0.3s linear;
 
   &:active,
   &--active {
-    color: @font-color-heading;
+    color: @color-black;
   }
 
   &:hover:not(&--active) {
-    color: fade(@font-color-heading, 60%);
+    color: fade(@color-black, 60%);
   }
 }

@@ -1,13 +1,15 @@
 .card-product {
   position: relative;
+  box-sizing: border-box;
   width: 360px;
-  border-top: 40px solid rgba(77, 77, 77, 0.12);
-  border-radius: 3px;
+  height: 618px;
+  border-top: 40px solid fade(@color-gray-darken, 12%);
+  border-radius: 5px;
   transition: 0.6s ease-in-out;
 
   &:hover {
-    border-top-color: rgba(77, 77, 77, 1);
-    .ps-drop-shadow(#000101; 25%; 90deg; 6px; 0; 15px);
+    border-top-color: @color-gray-darken;
+    box-shadow: 0 6px 15px 0 fade(@color-black, 25%);
   }
 
   &::before {
@@ -18,15 +20,16 @@
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background-color: @white;
-    box-shadow: 23px 0 0 @white, 46px 0 0 @white;
+    background-color: @color-white;
+    box-shadow: 23px 0 0 @color-white, 46px 0 0 @color-white;
   }
 }
 
 .card-product__image {
   display: block;
-  width: 360px;
-  height: 576px;
+  width: 100%;
+  height: 578px;
+  object-fit: cover;
 }
 
 .card-product__description {
@@ -34,9 +37,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 11px 60px 42px;
+  padding: 8px 60px 42px;
   text-align: center;
-  background-color: @bg-color-header;
+  background-color: @color-gray;
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
 
@@ -55,20 +58,20 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
-  color: @font-color-heading;
+  color: @color-black;
   text-transform: uppercase;
 }
 
 .card-product__link {
-  color: @font-color-menu;
+  color: @color-black;
   text-decoration: none;
 
   &:hover {
-    color: @font-color-menu--hover;
+    color: @color-red-light;
   }
 
   &:active {
-    color: @font-color-menu--active;
+    color: fade(@color-black, 30%);
   }
 }
 
@@ -76,10 +79,10 @@
   overflow: hidden;
   max-height: 380px;
   line-height: 18px;
-  color: @font-color-contact;
+  color: @color-gray-dark;
 }
 
 .card-product__button {
-  margin-top: 14px;
-  padding: 16px 60px;
+  margin-top: 18px;
+  width: 200px;
 }

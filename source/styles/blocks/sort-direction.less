@@ -7,7 +7,7 @@
 }
 
 .sort-direction__item {
-  padding-left: 19px;
+  margin-left: 19px;
 }
 
 .sort-direction__link {
@@ -16,17 +16,17 @@
   height: 0;
   border-left: 5.5px solid transparent;
   border-right: 5.5px solid transparent;
-  border-bottom: 10px solid fade(@black, 20%);
+  border-bottom: 10px solid fade(@color-black, 20%);
   color: currentColor;
-  transition: border-bottom-color 0.5s linear;
+  transition: border-bottom-color 0.3s linear;
 
   &:active,
   &--active {
-    border-bottom-color: @black;
+    border-bottom-color: @color-black;
   }
 
   &:hover:not(&--active) {
-    border-bottom-color: @bg-color-sort-direction;
+    border-bottom-color: #a6a6a6;
   }
 
   &--descending {

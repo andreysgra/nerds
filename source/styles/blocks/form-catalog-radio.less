@@ -1,0 +1,20 @@
+.form-catalog-radio__label::before {
+  width: 26px;
+  height: 26px;
+  background-image: url("../img/radio-off.svg");
+  background-size: 25px 25px;
+  background-position: 0% 50%;
+}
+
+.form-catalog-radio__radio:checked + .form-catalog-radio__label::before {
+  background-image: url("../img/radio-on.svg");
+}
+
+.form-catalog-radio__radio:disabled + .form-catalog-radio__label {
+  opacity: 0.1;
+  cursor: not-allowed;
+}
+
+.form-catalog-radio__radio:focus + .form-catalog-radio__label::before {
+  box-shadow: 0 0 0 2px @color-white, 0 0 0 3px @color-black;
+}

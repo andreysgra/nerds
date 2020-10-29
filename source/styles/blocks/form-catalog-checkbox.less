@@ -1,0 +1,23 @@
+.form-catalog-checkbox__label::before {
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+  background-size: 23px 23px;
+  background-position: 0% 50%;
+}
+
+.form-catalog-checkbox__checkbox:checked + .form-catalog-checkbox__label::before {
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/checkbox-on.svg");
+  background-size: 27px 23px;
+}
+
+.form-catalog-checkbox__checkbox:disabled + .form-catalog-checkbox__label {
+  opacity: 0.1;
+  cursor: not-allowed;
+}
+
+.form-catalog-checkbox__checkbox:focus + .form-catalog-checkbox__label::before {
+  box-shadow: 0 0 0 2px @color-white, 0 0 0 3px @color-black;
+}

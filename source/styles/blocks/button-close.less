@@ -1,0 +1,41 @@
+.button-close {
+  --button-diameter: 25px;
+  --cross-line-width: 25px;
+  --cross-line-height: 5px;
+
+  position: relative;
+  padding: 0;
+  width: var(--button-diameter);
+  height: var(--button-diameter);
+  border: none;
+  background-color: transparent;
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc((var(--button-diameter) - var(--cross-line-height)) / 2);
+    left: calc((var(--button-diameter) - var(--cross-line-width)) / 2);
+    width: var(--cross-line-width);
+    height: var(--cross-line-height);
+    background-color: @color-red-light;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

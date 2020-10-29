@@ -1,11 +1,9 @@
 .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  visibility: hidden;
-  padding-bottom: 80px;
-  background-position: 93% 100%;
+  box-sizing: border-box;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  min-height: 430px;
+  background-position: 100% 100%;
   background-repeat: no-repeat;
 
   &:nth-child(1) {
@@ -19,34 +17,27 @@
   &:nth-child(3) {
     background-image: url("../img/bg-slide-03.png");
   }
-
-  &--visible {
-    animation: fading-in 1.75s ease-in-out forwards;
-  }
-
-  &--hidden {
-    animation: fading-out 1.75s ease-in-out forwards;
-  }
 }
 
 .slide__content {
   width: 560px;
-  padding-top: 51px;
 }
 
-.slide__caption {
-  margin: 26px 0;
+.slide__title {
+  margin-top: 16px;
+  margin-bottom: 26px;
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
-  color: @font-color-heading;
+  color: @color-black;
 }
 
-.slide__text {
-  margin-right: 150px;
+.slide__description {
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .slide__button {
-  padding: 16px 54px;
   margin-top: 24px;
+  padding: 16px 54px;
 }

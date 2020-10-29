@@ -1,0 +1,30 @@
+.form-input {
+  padding: 14px 14px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  color: @color-gray-darken;
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+
+  &:hover {
+    border-color: #b4b9bb;
+  }
+
+  &:focus {
+    border-color: @color-black;
+    outline: none;
+  }
+
+  &:focus:invalid,
+  &:not(:placeholder-shown):not(:focus):invalid {
+    color: @color-red;
+    border-color: @color-red;
+  }
+
+  &::placeholder {
+    color: @color-gray-darken;
+  }
+}

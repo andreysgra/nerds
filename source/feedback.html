@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дизайн-студия «Нёрдс»</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+
+  <body class="page-body">
+    <header class="page-header">
+      <div class="content-wrapper">
+        <nav class="main-nav">
+          <a class="header-logo" href="index.html">
+            <img class="header-logo__image" src="img/nerds-logo.svg" alt="Логотип дизайн-студии «Нёрдс»" width="160"
+              height="65">
+          </a>
+
+          <ul class="main-nav__list main-menu">
+            <li class="main-menu__item">
+              <a class="main-nav__link" href="blank.html">Студия</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-nav__link" href="blank.html">Клиенты</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-nav__link" href="catalog.html">Магазин</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-nav__link" href="blank.html">Контакты</a>
+            </li>
+          </ul>
+
+          <div class="main-nav__user">
+            <a class="main-nav__link main-nav__link--icon main-nav__link--icon-cart" href="blank.html">Корзина</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <div class="page-main__header">
+        <div class="content-wrapper">
+          <h1 class="page-main__title">Напишите нам</h1>
+        </div>
+      </div>
+
+      <div class="page-main__modal modal-form">
+        <form class="form-feedback" action="https://echo.htmlacademy.ru" method="POST">
+          <div class="form-feedback__content-wrapper">
+            <label class="form-feedback__label">
+              Ваше имя:
+              <input class="form-feedback__input form-input" type="text" name="name" placeholder="Имя Фамилия" required>
+            </label>
+
+            <label class="form-feedback__label">
+              Ваш email:
+              <input class="form-feedback__input form-input" type="email" name="email" placeholder="email@example.com"
+                required>
+            </label>
+
+            <label class="form-feedback__label form-feedback__label-textarea">
+              Текст письма:
+              <textarea class="form-feedback__input form-input form-textarea" name="message"
+                placeholder="В свободной форме"></textarea>
+            </label>
+          </div>
+
+
+          <button class="button button--red form-feedback__button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <section class="map">
+        <h2 class="visually-hidden">Как нас найти</h2>
+
+        <picture>
+          <source type="image/webp" srcset="img/content/bg-map.webp">
+          <img class="map__image" src="img/content/bg-map.png"
+            alt="Офис по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" width="1440" height="416">
+        </picture>
+
+        <div class="map__interactive" id="map"></div>
+      </section>
+
+      <div class="page-footer__contacts contacts">
+        <p class="contacts__title">Nёrds design studio</p>
+
+        <p class="contacts__text">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+
+        <p class="contacts__text">тел.&nbsp;
+          <a class="contacts__link" href="tel:+78122757575">+7 (812) 275-75-75</a>
+        </p>
+      </div>
+
+      <div class="page-footer__social content-wrapper">
+        <ul class="social-links">
+          <li class="social-links__item">
+            <a class="social-links__link" href="https://vk.com" aria-label="Мы в ВКонтакте">
+              <svg class="social-links__icon" width="26" height="15">
+                <use xlink:href="img/symbols.svg#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="https://www.facebook.com" aria-label="Мы в Facebook">
+              <svg class="social-links__icon" width="12" height="22">
+                <use xlink:href="img/symbols.svg#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="https://www.instagram.com" aria-label="Мы в Instagram">
+              <svg class="social-links__icon" width="21" height="21">
+                <use xlink:href="img/symbols.svg#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="social-offering">
+          <p class="social-offering__title">Давайте дружить, это выгодно!</p>
+          <p class="social-offering__text">Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.bundle.js"></script>
+  </body>
+
+</html>
